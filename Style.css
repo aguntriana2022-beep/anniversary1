@@ -1,0 +1,597 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff0f5;
+
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 90%;
+  max-width: 380px;
+
+  padding: 30px 20px;
+
+  background: white;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #d66b91;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #999;
+}
+
+#display {
+  margin: 25px 0;
+
+  padding: 15px;
+
+  border: 2px dashed #e8b6c8;
+
+  border-radius: 15px;
+
+  font-size: 24px;
+
+  letter-spacing: 8px;
+
+  color: #d66b91;
+}
+
+.keypad {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+
+  border: 1px solid #ead3dc;
+
+  border-radius: 15px;
+
+  background: #fff;
+
+  font-size: 20px;
+
+  color: #777;
+}
+
+button:active {
+  transform: scale(0.95);
+
+  background: #ffe1ec;
+}
+.anniversary {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: muncul 1s ease;
+}
+
+.heart {
+  font-size: 50px;
+  animation: detak 1s infinite;
+}
+
+.anniversary h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.anniversary h2 {
+  color: #777;
+  margin-top: 0;
+}
+
+.tanggal {
+  color: #d66b91;
+  font-weight: bold;
+}
+
+.anniversary img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin: 15px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.pesan {
+  line-height: 1.6;
+  color: #666;
+}
+
+.anniversary button {
+  width: 100%;
+  margin-top: 15px;
+  background: #d66b91;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes detak {
+  50% {
+    transform: scale(1.2);
+  }
+}
+.game {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+.game h1 {
+  margin-top: 30px;
+}
+
+#arena {
+  position: relative;
+  height: 70vh;
+  margin-top: 20px;
+  overflow: hidden;
+  background: #fff5f8;
+  border-radius: 20px;
+}
+
+.hati {
+  position: absolute;
+  top: -50px;
+
+  font-size: 40px;
+
+  cursor: pointer;
+
+  animation: jatuh 4s linear;
+}
+
+@keyframes jatuh {
+
+  from {
+    top: -50px;
+  }
+
+  to {
+    top: 100%;
+  }
+
+}
+.selesai {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.big-heart {
+  font-size: 80px;
+  animation: detak 1s infinite;
+}
+
+.selesai h1 {
+  color: #d66b91;
+}
+
+.selesai p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.selesai button {
+  width: 100%;
+  background: #d66b91;
+  color: white;
+  border: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.puzzle-page {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.puzzle-page h1 {
+  color: #d66b91;
+}
+
+#puzzle {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+
+  margin: 25px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 4px;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.potongan {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  background-size: 300% 300%;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: transform 0.15s;
+}
+
+.potongan:active {
+  transform: scale(0.92);
+}
+
+#pesanPuzzle {
+  color: #777;
+  line-height: 1.6;
+}
+
+#pesanPuzzle button {
+  width: 100%;
+  background: #d66b91;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+.quiz {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.quiz h1 {
+  color: #d66b91;
+}
+
+.nomor {
+  color: #aaa;
+}
+
+.soal {
+  background: white;
+  padding: 25px 15px;
+  border-radius: 20px;
+  margin: 25px 0;
+  font-size: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+#pilihan {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#pilihan button {
+  width: 100%;
+  height: auto;
+  min-height: 55px;
+  padding: 10px;
+  background: white;
+  color: #777;
+}
+
+#pilihan button:active {
+  background: #ffe1ec;
+  transform: scale(0.97);
+}
+.memory {
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  padding: 30px 0 50px;
+  text-align: center;
+}
+
+.memory h1 {
+  color: #d66b91;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #999;
+  margin-bottom: 30px;
+}
+
+.memory-card {
+  background: white;
+  padding: 12px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+  animation: muncul 0.8s ease;
+}
+
+.memory-card img {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+}
+
+.memory-card h2 {
+  color: #d66b91;
+  font-size: 20px;
+}
+
+.memory-card p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.memory button {
+  width: 100%;
+  background: #d66b91;
+  color: white;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+/* ENDING */
+.ending {
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  padding: 40px 0 60px;
+  text-align: center;
+  animation: muncul 1.5s ease;
+}
+
+.finally {
+  color: #d66b91;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.foto-ending {
+  width: 85%;
+  margin: 0 auto 35px;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transform: rotate(-2deg);
+}
+
+.foto-ending img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.ending h1 {
+  color: #d66b91;
+  font-size: 32px;
+  margin: 25px 0;
+}
+
+.surat {
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.surat p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.surat .love {
+  color: #d66b91;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.music-button {
+  width: 100%;
+  margin-top: 25px;
+  background: #d66b91;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+#statusMusik {
+  color: #d66b91;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.tanggal-ending {
+  margin-top: 40px;
+  color: #aaa;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+/* ===== ENDING ===== */
+
+.ending {
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  padding: 40px 0 60px;
+  text-align: center;
+  animation: muncul 1.5s ease;
+}
+
+.finally {
+  color: #d66b91;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.foto-ending {
+  width: 85%;
+  margin: 0 auto 35px;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transform: rotate(-2deg);
+}
+
+.foto-ending img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.ending h1 {
+  color: #d66b91;
+  font-size: 32px;
+  margin: 25px 0;
+}
+
+.surat {
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+/* Teks muncul perlahan */
+.surat p {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: munculSurat 1.5s ease forwards;
+}
+
+.surat p:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.surat p:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.surat p:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.surat p:nth-child(4) {
+  animation-delay: 12s;
+}
+
+.surat p:nth-child(5) {
+  animation-delay: 16s;
+}
+
+.surat p:nth-child(6) {
+  animation-delay: 20s;
+}
+
+.surat p:nth-child(7) {
+  animation-delay: 24s;
+}
+
+.surat p:nth-child(8) {
+  animation-delay: 28s;
+}
+
+.surat p:nth-child(9) {
+  animation-delay: 32s;
+}
+
+.surat p:nth-child(10) {
+  animation-delay: 36s;
+}
+
+@keyframes munculSurat {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.surat p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.surat .love {
+  color: #d66b91;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.music-button {
+  width: 100%;
+  margin-top: 25px;
+  background: #d66b91;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+#statusMusik {
+  color: #d66b91;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.tanggal-ending {
+  margin-top: 40px;
+  color: #aaa;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
